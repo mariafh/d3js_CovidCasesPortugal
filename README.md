@@ -31,6 +31,7 @@ npm start
 ## Coding
 
 - Adding location information about every portuguese region
+
 _.src/communities.ts_
  ```typescript
 export const latLongCommunities: ResultEntry[] = [
@@ -127,6 +128,7 @@ export const latLongCommunities: ResultEntry[] = [
 ];
  ```
 - Adding stats infomation about covid cases in a base date and currently
+
 _.src/stats.ts_
 ```typescript
 export const initial_stats : ResultEntry[] =[  
@@ -280,6 +282,7 @@ export const final_stats : ResultEntry[] =[
 ```
 
 - Creating a scaleThreshold of colors depending on affected cases (domain)
+
 _.src/index.ts_
  ```typescript
 var colors = d3 
@@ -290,6 +293,7 @@ var colors = d3
 
 
 - Importing topojson file git Portugal geometry (portugal.json) and center and scale it in the frame
+
 _.src/index.ts_
  ```typescript
 const portugaljson = require("./portugal.json");
