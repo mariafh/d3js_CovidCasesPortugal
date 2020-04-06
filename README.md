@@ -281,17 +281,6 @@ export const final_stats : ResultEntry[] =[
 ];
 ```
 
-- Creating a scaleThreshold of colors depending on affected cases (domain)
-
-_.src/index.ts_
- ```typescript
-var colors = d3 
-  .scaleThreshold<number, string>()
-  .domain([1, 10, 20, 30, 60, 100, 200, 300, 400, 500, 600, 800, 900, 1234])
-  .range(["#edf7c0", "#e4f5b0", "#daf4a1", "#cef393", "#c0f285", "#b2ec79", "#a3e76d", "#93e162", "#80d555", "#6dc848", "#59bc3b", "#43b02e"]);
- ```
-
-
 - Importing topojson file git Portugal geometry (portugal.json) and center and scale it in the frame
 
 _.src/index.ts_
@@ -308,4 +297,14 @@ const aProjection = d3
 
 const geoPath = d3.geoPath().projection(aProjection);
 const geojson = topojson.feature(portugaljson, portugaljson.objects.PRT_adm1);
+ ```
+
+- Creating a scaleThreshold of colors depending on affected cases (domain)
+
+_.src/index.ts_
+ ```typescript
+var colors = d3 
+  .scaleThreshold<number, string>()
+  .domain([1, 10, 20, 30, 60, 100, 200, 300, 400, 500, 600, 800, 900, 1234])
+  .range(["#edf7c0", "#e4f5b0", "#daf4a1", "#cef393", "#c0f285", "#b2ec79", "#a3e76d", "#93e162", "#80d555", "#6dc848", "#59bc3b", "#43b02e"]);
  ```
